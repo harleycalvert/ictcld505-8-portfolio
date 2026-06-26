@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
-$conn = oci_connect('ADMIN', 'NxO&JD3jeI9WA@DWZ(-b%s*jSaF%', 'tcps://adb.ap-melbourne-1.oraclecloud.com:1522/fe08fe09fa2f61e_pets_high.adb.oraclecloud.com?wallet_location=/opt/wallet');
+$conn = oci_connect('ADMIN', 'lNHg%f$#d%$%^4ghjbhFGjh', 'tcps://adb.ap-melbourne-1.oraclecloud.com:1522/ge08fc09fa2f61e_adb2204_medium.adb.oraclecloud.com?wallet_location=/opt/wallet');
 
 if (!$conn) {
     $e = oci_error();
