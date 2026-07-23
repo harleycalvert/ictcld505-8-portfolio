@@ -1,0 +1,57 @@
+sudo adduser harley
+sudo usermod -aG sudo harley
+su - harley
+sudo whoami
+
+
+
+
+getent group sudo
+sudo deluser --remove-home chisstu
+sudo delgroup chisstu
+getent passwd chisstu
+
+
+sudo apt update
+sudo apt upgrade
+
+sudo apt install -y git
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git clone https://github.com/harleycalvert/ictcld505-8-portfolio.git
+
+
+sudo hostnamectl set-hostname new-hostname
+sudo nano /etc/hosts
+127.0.1.1    old-hostname
+sudo reboot
+
+
+echo $PATH
+export PATH=$PATH:/home/harley/bin
+echo 'export PATH=$PATH:/home/harley/bin' >> ~/.bashrc
+source ~/.bashrc
+
+# https://github.com/oracle/oci-cli/issues/875
+
+
+LATEST_OCICLI=$(curl -L https://api.github.com/repos/oracle/oci-cli/releases | \
+        jq -r 'sort_by(.name) | reverse | .[0].name') ;
+echo "LATEST_OCICLI=${LATEST_OCICLI}" ;
+bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)" \
+        -s \
+        --accept-all-defaults \
+        --oci-cli-version ${LATEST_OCICLI}
+
+
+oci --version
+
+
+
+
+
+
+
+
+
